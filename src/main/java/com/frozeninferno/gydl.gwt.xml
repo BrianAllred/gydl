@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 2.7.0//EN"
+        "http://gwtproject.org/doctype/2.7.0/gwt-module.dtd">
+<module rename-to='gydl'>
+    <inherits name='com.google.gwt.user.User'/>
+    <inherits name="com.gwtplatform.mvp.MvpWithEntryPoint"/>
+    <inherits name="org.gwtbootstrap3.GwtBootstrap3"/>
+    <inherits name="org.gwtbootstrap3.extras.animate.Animate"/>
+    <inherits name="com.google.gwt.user.RemoteService"/>
+    <inherits name="com.google.gwt.query.Query"/>
+    <inherits name="org.gwtbootstrap3.extras.select.Select"/>
+    <inherits name="org.gwtbootstrap3.extras.bootbox.Bootbox"/>
+    <inherits name="org.gwtbootstrap3.extras.toggleswitch.ToggleSwitch"/>
+
+    <extend-configuration-property name="gin.ginjector.modules"
+                                   value="com.frozeninferno.client.gin.ClientModule"/>
+
+    <!-- Specify the paths for translatable code                    -->
+    <source path='client'/>
+    <source path='shared'/>
+
+    <public path='public'>
+        <include name='js/*.js'/>
+    </public>
+
+    <set-configuration-property name="CssResource.enableGss" value="true"/>
+</module>

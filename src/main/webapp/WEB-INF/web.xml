@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5">
+
+    <servlet>
+        <servlet-name>YDLServiceImpl</servlet-name>
+        <servlet-class>
+            com.frozeninferno.server.YDLImpl
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>YDLServiceImpl</servlet-name>
+        <url-pattern>/gydl/YDLService</url-pattern>
+    </servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+
+    <context-param>
+        <param-name>storagePath</param-name>
+        <param-value>/storage/gydl/</param-value>
+    </context-param>
+    <context-param>
+        <param-name>storageLimit</param-name>
+        <param-value>5</param-value>
+    </context-param>
+    
+    <!--<security-constraint>
+        <web-resource-collection>
+            <web-resource-name>gydl</web-resource-name>
+            <url-pattern>/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>user</role-name>
+        </auth-constraint>
+        &lt;!&ndash;<user-data-constraint>
+            <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+        </user-data-constraint>&ndash;&gt;
+    </security-constraint>
+    <login-config>
+        <auth-method>BASIC</auth-method>
+        <realm-name>gydl</realm-name>
+    </login-config>
+    <security-role>
+        <role-name>user</role-name>
+    </security-role>-->
+</web-app>
